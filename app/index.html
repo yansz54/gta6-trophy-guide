@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:,">
+<title>Leonida Legend — GTA VI Trophy Guide &amp; Tracker</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand">
+    <div class="brand-mark" aria-hidden="true">LL</div>
+    <div>
+      <h1>Leonida Legend</h1>
+      <p class="subtitle">The complete GTA VI trophy guide &amp; tracker — all 55 trophies, cited guides, roadmap to the platinum.</p>
+    </div>
+  </div>
+  <div class="stats" id="statsBar" aria-label="Trophy statistics"></div>
+  <div class="progress-wrap">
+    <div class="progress-label"><span id="progressText">0 / 55 earned</span><span id="progressPct">0%</span></div>
+    <div class="progress-bar"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
+    <div class="grade-counts" id="gradeCounts"></div>
+  </div>
+  <nav class="tabs" aria-label="Views">
+    <a href="#/" id="tabChecklist" class="tab active">Checklist</a>
+    <a href="#/roadmap" id="tabRoadmap" class="tab">Roadmap to Platinum</a>
+  </nav>
+</header>
+
+<main>
+  <section id="viewChecklist" class="view">
+    <div class="controls" aria-label="Filters and tracker controls">
+      <label class="search-box">Search
+        <input type="search" id="searchInput" placeholder="Search name, description or guide…" autocomplete="off">
+      </label>
+      <div class="filter-group" id="gradeFilters" aria-label="Filter by grade">
+        <span class="filter-label">Grade</span>
+        <button data-grade="" class="chip active">All</button>
+        <button data-grade="platinum" class="chip">Platinum</button>
+        <button data-grade="gold" class="chip">Gold</button>
+        <button data-grade="silver" class="chip">Silver</button>
+        <button data-grade="bronze" class="chip">Bronze</button>
+      </div>
+      <div class="filter-group" id="kindFilters" aria-label="Filter by kind">
+        <span class="filter-label">Kind</span>
+        <button data-kind="" class="chip active">All</button>
+        <button data-kind="story" class="chip">Story</button>
+        <button data-kind="missable" class="chip warn">Missable</button>
+        <button data-kind="collectibles" class="chip">Collectibles</button>
+        <button data-kind="activities" class="chip">Activities</button>
+      </div>
+      <div class="filter-group" id="earnedFilters" aria-label="Filter by earned">
+        <span class="filter-label">Earned</span>
+        <button data-earned="" class="chip active">All</button>
+        <button data-earned="yes" class="chip">Earned</button>
+        <button data-earned="no" class="chip">Not earned</button>
+      </div>
+      <label class="spoiler-toggle" title="Hide the names and descriptions of story trophies until they are earned">
+        <input type="checkbox" id="spoilerToggle" checked>
+        <span>Spoiler mode: hide story trophies until earned</span>
+      </label>
+      <div class="io-buttons">
+        <button id="exportBtn" type="button">Export progress</button>
+        <button id="importBtn" type="button">Import progress</button>
+        <input type="file" id="importFile" accept="application/json,.json" hidden>
+      </div>
+    </div>
+    <p class="note" id="resultCount" aria-live="polite"></p>
+    <div class="layout">
+      <div class="list-col">
+        <ol id="trophyList" class="trophy-list"></ol>
+      </div>
+      <aside class="detail-col" id="detailPanel" aria-live="polite"></aside>
+    </div>
+  </section>
+
+  <section id="viewRoadmap" class="view hidden">
+    <div class="roadmap-intro">
+      <h2>Roadmap to the platinum</h2>
+      <p>One playthrough, about 200 hours, difficulty 4/10. There is no mission replay and no New Game+, so keep a save at the start and end of each chapter. Cheats disable trophies and saving. Everything except the one flagged meditation can be finished after the story in free-roam.</p>
+      <p class="missable-banner"><strong>1 potentially missable trophy:</strong> Positive Mental Attitude — do the Chapter 1 balcony meditation when it appears (see Stage 2).</p>
+    </div>
+    <div id="roadmapStages"></div>
+    <div class="checklist-100">
+      <h2>The 100% checklist (A Long Road)</h2>
+      <p>Visible in-game only after the story (Progress &gt; Stats &gt; 100% Completion), but progress made during the story already counts. The list is forgiving — closer to 60% true completion.</p>
+      <ul id="hundredList"></ul>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>Guide text is written for this entry in our own words. Sources: <a href="https://www.powerpyx.com/gta-6-grand-theft-auto-vi-trophy-guide-roadmap/">PowerPyx — GTA 6 Trophy Guide &amp; Roadmap</a> and <a href="https://www.exophase.com/game/grand-theft-auto-vi-psn/trophies/">Exophase — Grand Theft Auto VI Trophies</a>. Early unlock rates are day-1 data from 19 Nov 2026 (Exophase). This is a fan-made guide, not affiliated with Rockstar Games. Works fully offline — no network requests.</p>
+  <p class="foot-note">Leonida Legend — built for make.fun's “Build the best GTA 6 trophy guide” bounty.</p>
+</footer>
+
+<script src="roadmap.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
